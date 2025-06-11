@@ -1,0 +1,143 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos generales */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+.container {
+    margin-left: 250px;  /* Ajusta para dejar espacio a la barra lateral */
+    padding: 20px;
+}
+
+/* Barra lateral */
+.navbar-side {
+    background-color: #222;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    padding-top: 40px;
+    color: white;
+    left: 0;
+    top: 0;
+}
+
+/* Título de la barra lateral */
+.sidebar-title {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+/* Imagen del usuario */
+.user-img-div {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.user-img-div img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Menú de navegación */
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    text-align: left;
+}
+
+.nav li a {
+    display: block;
+    padding: 15px 15px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav li a.active,
+.nav li a:hover {
+    background: #007bff;
+    font-weight: bold;
+}
+
+/* Barra superior */
+.navbar {
+    background-color: #1E90FF;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 250px);
+    position: fixed;
+    top: 0;
+    left: 250px;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+/* Botón de cerrar sesión */
+#logoutBtn {
+    color: red;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+
+#logoutBtn:hover {
+    background: darkred;
+}
+
+/* Contenedor del encabezado */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 30px; /* Para la barra superior */
+}
+
+.header-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Botón Agregar Nuevo */
+.add-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.add-btn:hover {
+    background: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+}
+/* Separación de la barra de búsqueda */
+#search {
+    margin-bottom: 20px; /* Espacio entre la búsqueda y la tabla */
+}

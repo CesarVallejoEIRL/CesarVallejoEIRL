@@ -1,0 +1,302 @@
+/* Reset básico */
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Barra lateral */
+.navbar-side {
+    background-color: #222;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    padding-top: 3px;
+    color: white;
+    left: 0;
+    top: 0;
+}
+
+/* Título barra lateral */
+.sidebar-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Imagen usuario */
+.user-img-div {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.user-img-div img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Menú navegación */
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    text-align: left;
+}
+
+.nav li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav li a.active,
+.nav li a:hover {
+    background: #007bff;
+    font-weight: bold;
+}
+
+/* Barra superior */
+.navbar {
+    background-color: #1E90FF;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 250px);
+    position: fixed;
+    top: 0;
+    left: 250px;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+/* Botón cerrar sesión */
+#logoutBtn {
+    color: red;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+
+#logoutBtn:hover {
+    background: darkred;
+}
+
+/* Encabezado */
+.header-container {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 30px;
+}
+
+.header-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Botón agregar */
+.add-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.add-btn:hover {
+    background: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+}
+
+/* Barra de búsqueda */
+#search {
+    margin-bottom: 20px;
+}
+
+/* Contenedor de tarjetas */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Tarjeta individual */
+.card {
+    background-color: #f9f9f9;
+    border-radius: 31px;
+    padding: 13px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    width: 280px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+}
+
+.card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card i {
+    font-size: 36px;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+/* Contenedor de grados */
+.grades-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Tarjeta de grado */
+.grade-card {
+    flex: 1 1 300px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.grade-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grade-number {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.grade-actions i {
+    margin-left: 10px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.grade-actions .delete-icon {
+    color: red;
+}
+
+/* Modal */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+#logoutBtn {
+    color: red;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+/* Botón cerrar modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 26px;
+    font-weight: bold;
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Tabla de alumnos */
+#alumnos-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#alumnos-table th,
+#alumnos-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#alumnos-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Etiquetas de estado */
+.bg-success {
+    color: white;
+    background: green;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.bg-danger {
+    color: white;
+    background: red;
+    padding: 3px 8px;
+    border-radius: 5px;
+}     

@@ -1,0 +1,441 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    margin-left: 250px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+#logoutBtn {
+    color: red;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+/* Barra lateral (mantenido igual) */
+.navbar-side {
+    background-color: #222;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    padding-top: 40px;
+    color: white;
+    left: 0;
+    top: 0;
+}
+
+.sidebar-title {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+.user-img-div img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.nav li a {
+    display: block;
+    padding: 15px 15px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.user-img-div h5 {
+    text-align: center;  /* Centra el nombre de usuario */
+    margin-top: 10px;
+}
+
+.nav li a.active,
+.nav li a:hover {
+    background: #007bff;
+    font-weight: bold;
+}
+
+/* Barra superior */
+.navbar {
+    background-color: #1E90FF;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 250px);
+    position: fixed;
+    top: 0;
+    left: 250px;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+/* Contenedores y botones */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.header-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.add-btn {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.add-btn:hover {
+    background: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.4);
+}
+
+.card-subtitle {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    font-weight: bold;
+}
+
+/* Tabla de estudiantes - ESTILOS MEJORADOS */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#tablaEstudiantes {
+    width: 100% !important;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 20px;
+}
+
+#tablaEstudiantes thead {
+    background: #007bff;
+}
+
+#tablaEstudiantes th, 
+#tablaEstudiantes td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#tablaEstudiantes th {
+    background-color: #1E90FF;
+    color: white;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+}
+
+#tablaEstudiantes tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#tablaEstudiantes tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Columnas con anchos específicos para mejor distribución */
+#tablaEstudiantes th:nth-child(1),
+#tablaEstudiantes td:nth-child(1) {
+    width: 5%;
+}
+
+#tablaEstudiantes th:nth-child(2),
+#tablaEstudiantes td:nth-child(2) {
+    width: 20%;
+}
+
+#tablaEstudiantes th:nth-child(3),
+#tablaEstudiantes td:nth-child(3) {
+    width: 12%;
+}
+
+#tablaEstudiantes th:nth-child(4),
+#tablaEstudiantes td:nth-child(4) {
+    width: 10%;
+}
+
+#tablaEstudiantes th:nth-child(5),
+#tablaEstudiantes td:nth-child(5) {
+    width: 8%;
+}
+
+#tablaEstudiantes th:nth-child(6),
+#tablaEstudiantes td:nth-child(6) {
+    width: 8%;
+}
+
+#tablaEstudiantes th:nth-child(7),
+#tablaEstudiantes td:nth-child(7) {
+    width: 10%;
+}
+
+#tablaEstudiantes th:nth-child(8),
+#tablaEstudiantes td:nth-child(8) {
+    width: 8%;
+}
+
+#tablaEstudiantes th:nth-child(9),
+#tablaEstudiantes td:nth-child(9) {
+    width: 8%;
+}
+
+#tablaEstudiantes th:nth-child(10),
+#tablaEstudiantes td:nth-child(10) {
+    width: 11%;
+}
+
+/* Acciones en tabla */
+.actions {
+    text-align: center;
+}
+
+.icon-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.icon-btn i {
+    font-size: 18px;
+}
+
+/* Colores personalizados */
+.icon-btn.edit i {
+    color: #28a745; /* Verde */
+}
+
+.icon-btn.delete i {
+    color: #dc3545; /* Rojo */
+}
+
+.icon-btn.inactive i {
+    color: #6f42c1; /* Morado */
+}
+
+.icon-btn:hover {
+    transform: scale(1.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    width: 95%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    resize: vertical;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+.modal-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.modal-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.modal-buttons .confirm {
+    background-color: #28a745;
+    color: white;
+}
+
+.modal-buttons .cancel {
+    background-color: #dc3545;
+    color: white;
+}
+
+.modal-buttons .confirm:hover,
+.modal-buttons .cancel:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Responsividad MEJORADA */
+@media (max-width: 1366px) {
+    /* Ajustes para laptops */
+    #tablaEstudiantes {
+        font-size: 13px;
+    }
+    
+    #tablaEstudiantes th, 
+    #tablaEstudiantes td {
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        margin-left: 0;
+        padding-top: 70px;
+    }
+    
+    .navbar-side {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .navbar {
+        width: 100%;
+        left: 0;
+    }
+    
+    /* Ocultar columnas menos importantes */
+    #tablaEstudiantes th:nth-child(3),
+    #tablaEstudiantes td:nth-child(3),
+    #tablaEstudiantes th:nth-child(7),
+    #tablaEstudiantes td:nth-child(7) {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #tablaEstudiantes {
+        display: block;
+    }
+    
+    #tablaEstudiantes thead {
+        display: none;
+    }
+    
+    #tablaEstudiantes tbody, 
+    #tablaEstudiantes tr, 
+    #tablaEstudiantes td {
+        display: block;
+        width: 100%;
+    }
+    
+    #tablaEstudiantes tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+    }
+    
+    #tablaEstudiantes td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid #eee;
+    }
+    
+    #tablaEstudiantes td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+    
+    #tablaEstudiantes td:last-child {
+        border-bottom: 0;
+        text-align: center;
+        padding-left: 15px;
+    }
+    
+    #tablaEstudiantes td:last-child::before {
+        display: none;
+    }
+    
+    .actions {
+        justify-content: center;
+    }
+    
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    #logoutBtn {
+        margin-top: 10px;
+    }
+}

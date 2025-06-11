@@ -1,0 +1,211 @@
+/* Barra lateral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-side {
+    background-color: #222;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    padding-top: 40px;
+    color: white;
+    left: 0;
+    top: 0;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 250px;
+    background-color: #222;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+}
+/* Título */
+.sidebar-title {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+.sidebar h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Imagen de usuario */
+.user-img-div {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.user-img-div img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: block;
+    margin: 0 auto;
+}
+/* Lista de navegación */
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Enlaces del menú */
+.nav li {
+    text-align: left;
+}
+
+.nav li a {
+    display: block;
+    padding: 15px 15px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav li a.active,
+.nav li a:hover {
+    background: #007bff;
+    font-weight: bold;
+}
+
+/* Botón de cerrar sesión */
+#logoutBtn {
+    color: red;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+#logoutBtn:hover {
+    background: darkred;
+}
+
+/* Menú lateral */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    transition: 0.3s;
+    font-size: 16px;
+    border-bottom: 1px solid #333;
+}
+
+.menu li a:hover,
+.menu .active a {
+    background-color: #1E90FF;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    max-width: 500px;
+    background: white;
+    padding: 0; /* Ajuste para no agregar espacios extras */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    border: 1px solid #ddd;
+    overflow: hidden; /* Asegura que el encabezado se integre bien */
+}
+
+/* Encabezado verde corregido */
+.form-header {
+    background: #d4edda !important;
+    color: #333;
+    padding: 12px;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+}
+
+/* Etiquetas */
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 20px;
+    color: #333;
+}
+
+/* Campos de entrada */
+.form-container input {
+    width: calc(100% - 40px);
+    padding: 8px;
+    margin: 5px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Botón de envío */
+.form-container button {
+    width: calc(100% - 40px);
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 15px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background: #0056b3;
+}
+
+/* Ajuste para centrar en la sección de contenido */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Contenido principal */
+.content {
+    margin-left: 250px;
+    padding: 40px;
+    flex-grow: 1;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}

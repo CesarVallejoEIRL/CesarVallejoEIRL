@@ -1,0 +1,687 @@
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    overflow-x: hidden;
+}
+#wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* BARRA LATERAL */
+.navbar-side {
+    background-color: #222;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    color: white;
+    left: 0;
+    top: 0;
+    z-index: 900;
+    overflow-y: auto;
+}
+.sidebar-title {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 26px;
+    padding-top: 15px;
+    text-transform: uppercase;
+}
+.user-img-div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.user-img-div img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: block;
+    margin: 0 auto;
+}
+.user-img-div h5 {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+.nav {
+    list-style: none;
+}
+.nav li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav li a:hover,
+.nav li a.active-menu {
+    background: #007bff;
+    font-weight: bold;
+}
+#logoutBtn {
+    color: red;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+/* BARRA SUPERIOR */
+.navbar {
+    background-color: #1E90FF;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 250px);
+    position: fixed;
+    top: 0;
+    left: 250px;
+    z-index: 1000;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.navbar h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+/* CONTENIDO PRINCIPAL */
+.main-content {
+    margin-top: 60px;
+    padding: 25px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    width: 100%;
+    overflow: hidden;
+    margin-left: 250px;
+}
+
+.main-content h1 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.8em;
+}
+
+/* PANELES */
+.panel {
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.panel h2 {
+    color: #34495e;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* FORMULARIO DE BÚSQUEDA */
+.search-fields {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.search-fields input,
+.search-fields select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    flex: 1;
+    min-width: 200px;
+    transition: border 0.3s;
+}
+
+.search-fields input:focus,
+.search-fields select:focus {
+    border-color: #1E90FF;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(30, 144, 255, 0.2);
+}
+
+.search-fields button {
+    padding: 10px 20px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search-fields button:hover {
+    background-color: #187bcd;
+    transform: translateY(-1px);
+}
+
+  /* Estilos mejorados para la tabla de reportes */
+ .table-responsive {
+     overflow-x: auto;
+    margin: 20px 0;
+ }
+        
+ table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+ }
+        
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+        
+th {
+    background-color: #a94442;
+    color: white;
+}
+        
+tr:hover {
+    background-color: #f5f5f5;
+}
+        
+.btn-validate {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+        
+.btn-validate:hover {
+    background-color: #45a049;
+}
+        
+/* Estilos para el modal */
+ .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+            
+}
+        
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+ }
+ .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+        
+.modal-header h3 {
+    margin: 0;
+    color: #a94442;
+}
+        
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+        
+.close:hover {
+    color: black;
+}
+        
+/* Estilos para la información del estudiante */
+    .student-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+        
+.student-info-item h4 {
+    margin: 0 0 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+        
+ .student-info-item p {
+    margin: 0;
+    font-weight: bold;
+}
+        
+        /* Estilos para la tabla de pagos en el modal */
+.payments-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+        
+.payments-table th, .payments-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+ }
+        
+.payments-table th {
+    background-color: #e91e1e;
+}
+        
+/* Estilos para el área de observaciones */
+.observations-area {
+    margin-top: 20px;
+}
+        
+.observations-area label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+        
+.observations-area textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-height: 100px;
+    resize: vertical;
+}
+        
+ /* Estilos para el pie del modal */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    }
+        
+.modal-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+        
+.btn-cancel {
+    background-color: #f1f1f1;
+    color: #333;
+}
+        
+.btn-cancel:hover {
+    background-color: #ddd;
+}
+        
+.btn-confirm {
+    background-color: #a94442;
+    color: white;
+}
+        
+.btn-confirm:hover {
+    background-color: #963c3a;
+}
+        
+    /* Estilos para la boleta */
+.boleta-content {
+    max-width: 800px;
+    font-family: Arial, sans-serif;
+}
+        
+.boleta-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #a94442;
+    padding-bottom: 15px;
+}
+        
+.boleta-logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+        
+.boleta-title {
+    flex: 1;
+    text-align: center;
+}
+        
+.boleta-title h2 {
+    margin: 0;
+    color: #a94442;
+}
+        
+.boleta-title h3 {
+    margin: 5px 0;
+    color: #333;
+}
+        
+.boleta-title p {
+    margin: 3px 0;
+    font-size: 12px;
+    color: #666;
+}
+        
+.boleta-info {
+    margin-bottom: 20px;
+}
+        
+.boleta-info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+        
+.boleta-detalle table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+        
+.boleta-detalle th, .boleta-detalle td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+        
+.boleta-detalle th {
+    background-color: #f2f2f2;
+}
+        
+.boleta-footer {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+        
+.boleta-firma {
+    margin-top: 50px;
+    text-align: right;
+}
+        
+.boleta-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+        
+ .btn-print {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+        
+.btn-close-boleta {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* Tus estilos CSS existentes */
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: rgb(0, 0, 0);
+    font-weight: 600;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.btn-generate {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-generate:hover {
+    background-color: #138496;
+}
+
+.btn-generate i {
+    margin-right: 5px;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #f5f5f5;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #333;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.student-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.student-info-item h4 {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.student-info-item p {
+    margin: 0;
+    padding: 8px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.observations-area {
+    margin-top: 20px;
+}
+
+.observations-area label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.observations-area textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+
+.modal-btn {
+    padding: 8px 15px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #5a6268;
+}
+
+.btn-confirm {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-confirm:hover {
+    background-color: #218838;
+}
+
+.history-panel {
+    margin-top: 40px;
+    display: none;
+}
+
+.history-toggle {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.history-toggle:hover {
+    background-color: #5a6268;
+}
+
+.history-toggle i {
+    margin-right: 5px;
+}
+
+.badge {
+    background-color: #17a2b8;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+        
+@media print {
+    .boleta-actions, .no-print {
+        display: none !important;
+        }
+            
+        body {
+            font-size: 12pt;
+            background: white;
+            color: black;
+        }
+            
+    .boleta-content {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+         }
+
+    }

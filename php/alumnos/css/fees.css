@@ -1,0 +1,107 @@
+/* Reset básico */
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Barra lateral */
+.navbar-side {
+    background-color: #222;
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    padding-top: 3px;
+    color: white;
+    left: 0;
+    top: 0;
+}
+
+/* Título barra lateral */
+.sidebar-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Imagen usuario */
+.user-img-div {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.user-img-div img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Menú navegación */
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    text-align: left;
+}
+
+.nav li a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav li a.active,
+.nav li a:hover {
+    background: #007bff;
+    font-weight: bold;
+}
+
+/* Barra superior */
+.navbar {
+    background-color: #1E90FF;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 250px);
+    position: fixed;
+    top: 0;
+    left: 250px;
+    z-index: 1000;
+    justify-content: space-between;
+}
+
+/* Botón cerrar sesión */
+#logoutBtn {
+    color: red;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+}
+
+#logoutBtn:hover {
+    background: darkred;
+}

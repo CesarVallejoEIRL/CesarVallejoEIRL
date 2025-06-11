@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/cesar.png">
+    <title>CEBA Cesar Vallejo Barranca</title>
+    <link rel="stylesheet" href="/php/css/register.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Sección izquierda con la imagen -->
+        <div class="login-left">
+            <img src="../php/img/logo.png" alt="Ilustración de registro">
+        </div>
+
+        <!-- Sección derecha con el formulario -->
+        <div class="login-right">
+            <div class="login-box">
+                <img src="/php/img/cesar.png" alt="Avatar" class="avatar">
+                <h2>Registro de Usuario</h2>
+                <form id="registerForm">
+                    <input type="text" id="usuario" name="usuario" placeholder="Usuario" required>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit">Registrar</button>
+                </form>
+                <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que se recargue la página
+
+            let usuario = document.getElementById("usuario").value.trim();
+            let password = document.getElementById("password").value.trim();
+
+            if (usuario === "" || password === "") {
+                mostrarMensaje("Todos los campos son obligatorios", "red");
+                return;
+            }
+
+            fetch("registro.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: new URLSearchParams({ usuario, password })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = "login.html"; // Redirección inmediata al login
+                } else {
+                    mostrarMensaje(data.error, "red");
+                }
+            })
+            .catch(error => console.error("Error en la solicitud:", error));
+
+            function mostrarMensaje(texto, color) {
+                let mensaje = document.createElement("p");
+                mensaje.style.color = color;
+                mensaje.textContent = texto;
+                document.querySelector(".login-box").appendChild(mensaje);
+            }
+        });
+    </script>
+</body>
+</html>
